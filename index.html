@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet" media="screen" />
+    <title>Tic! Tac!! TOE!!!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tic! Tac!! TOE!!!</h1>
+        <h2 id="message">Player 1! Your turn!</h2>
+      </header>
+
+      <section id="gameboard">
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </section>
+
+      <div id="actions">
+        <button id="reset">reset game</button>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="opponent-ai.js"></script>
+  </body>
+</html>

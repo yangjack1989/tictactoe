@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body, .container {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url(bg.png);
+  background-position: center;
+  background-size: cover;
+  perspective: 800px;
+}
+
+
+.container {
+  display: flex-column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  font-family: 'Orbitron', sans-serif;
+  color: #f39c12;
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Orbitron', sans-serif;
+  color: #ecf0f1;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+section#gameboard {
+  transform: rotate3d(0, 1, 0, 25deg);
+}
+
+section#gameboard.gameover .row .cell {
+  background-color: rgba(189, 195, 199,0.25);
+  border: 3px solid rgba(189, 195, 199,0.5);
+  transition: 0.5s;
+}
+
+section#gameboard .row {
+  display: flex;
+  justify-content: center;
+}
+
+section#gameboard .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 4em;
+  color: #ecf0f1;
+  font-weight: bold;
+  margin: 2px;
+  background-color: rgba(52, 152, 219, 0.25);
+  border: 3px solid rgba(52, 152, 219, 0.75);
+}
+
+section#gameboard .cell:hover {
+  background-color: rgba(52, 152, 219, 0.55);
+  border: 3px solid rgba(236, 240, 241,1.0);
+  transition: 0.5s;
+}
+
+section#gameboard .row:nth-child(1) .cell:nth-child(1) {
+  border-top-left-radius: 50px;
+}
+
+section#gameboard .row:nth-child(3) .cell:nth-child(3) {
+  border-bottom-right-radius: 50px;
+}
+
+div#actions {
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+button#reset {
+  padding: 2em;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(243, 156, 18,0.25);
+  border: 3px solid rgba(243, 156, 18,0.5);
+  color: #ecf0f1;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+}
+
+button#reset:hover {
+  background-color: rgba(243, 156, 18,0.5);
+  border: 3px solid rgba(243, 156, 18,0.75);
+  transition: 0.5s;
+}
